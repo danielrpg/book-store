@@ -15,7 +15,9 @@ docker-compose.yml.back ==> docker-compose.yml
 
 docker.env.back ==> docker.env 
 
-.env.back ==> .env``` 
+.env.back ==> .env 
+
+``` 
 
 
 2.- First excecute this command in a terminal
