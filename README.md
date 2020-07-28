@@ -10,11 +10,12 @@ Email: daniel.fernandezgp@gmail.com
 ## STEPS FOR START PROJECT
 1.- Please change all .back files to correct names:
 
+```
 docker-compose.yml.back ==> docker-compose.yml 
 
 docker.env.back ==> docker.env 
 
-.env.back ==> .env 
+.env.back ==> .env``` 
 
 
 2.- First excecute this command in a terminal
@@ -31,8 +32,11 @@ this will start dabate postgres in a docker container with pg admin inside
 4.- Then you should go to the following link inside a postman
 
 `http://localhost:3000/author/`
+
 `http://localhost:3000/book/`
+
 `http://localhost:3000/cart/`
+
 
 5.- If you like there is a postman collection file you can execute this 
 `book-store.postman_collection.json`
