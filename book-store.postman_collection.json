@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "a338f751-f4a1-4a4d-b35c-7e7a653f3c73",
+		"name": "book-store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "daniel",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Ab!##FRES",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{env}}/auth/signup/",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"auth",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "daniel",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Ab!##FRES",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{env}}/auth/signin/",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"auth",
+						"signin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Auths",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env}}/author/",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"author",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "daniel",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "fernandez",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "nationality",
+							"value": "paris",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "21/07/2020",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{env}}/author/",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"author",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Author By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env}}/author/1",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"author",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

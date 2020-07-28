@@ -4,7 +4,30 @@ Book Store
 
 ## AUTHOR
 
-Daniel Fernandez
+Name: Daniel Fernandez
+Email: daniel.fernandezgp@gmail.com
+
+## STEPS FOR START PROJECT
+
+1.- First excecute this command in a terminal
+
+`docker-compose up`
+
+this will start dabate postgres in a docker container with pg admin inside
+
+2.- Then you should execute following command in terminal
+
+`npm run start:dev` --> dev mode 
+`npm run start` --> pre prod mode
+
+3.- Then you should go to the following link inside a postman
+
+`http://localhost:3000/author/`
+`http://localhost:3000/book/`
+`http://localhost:3000/cart/`
+
+4.- If you like there is a postman collection file you can execute this 
+`book-store.postman_collection.json`
 
 ## PROJECT DESCRIPTION
 
