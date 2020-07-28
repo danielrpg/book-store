@@ -5,6 +5,7 @@ Book Store
 ## AUTHOR
 
 Name: Daniel Fernandez
+
 Email: daniel.fernandezgp@gmail.com
 
 ## STEPS FOR START PROJECT
