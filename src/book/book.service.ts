@@ -11,6 +11,14 @@ export class BookService {
         private bookRepository: BookRepository
     ) {}
 
+    getAll(page: number = 1): Promise<Book[]> {
+        return this.bookRepository.find({
+            relations: ['author'],
+            take: 10,
+            skip: 10 * (page - 1),
+        });
+    }
+
     getAllBooks(): Promise<Book[]> {
         return this.bookRepository.getAllBooks();
     }

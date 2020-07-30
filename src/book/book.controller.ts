@@ -1,4 +1,4 @@
-import { Controller, Get, Param, ParseIntPipe, Post, Body, Delete } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe, Post, Body, Delete, Query } from '@nestjs/common';
 import { BookService } from './book.service';
 import { Book } from './book.entity';
 import { CreateBookDto } from './dto/create-book.dto';
@@ -8,6 +8,11 @@ export class BookController {
     constructor(
         private bookService: BookService
     ) {}
+
+    @Get('/getall')
+    getAll(@Query('page') page: number): Promise<Book[]> {
+        return this.bookService.getAll(page);
+    }    
 
     @Get()
     getAllBooks(): Promise<Book[]> {
