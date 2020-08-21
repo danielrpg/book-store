@@ -7,7 +7,7 @@ import { GetUser } from './decorator/get-user.decorator';
 import { User } from './user.entity';
 
 @Controller('auth')
-@UseGuards(AuthGuard())
+// @UseGuards(AuthGuard())
 export class AuthController {
     constructor(
         private authService: AuthService
@@ -20,7 +20,6 @@ export class AuthController {
     @ApiBody({
         type: AuthCredentialsDto
     })
-    @ApiBearerAuth()
     signUp(@Body(ValidationPipe) authCredentialsDto: AuthCredentialsDto): Promise<void> {
         return this.authService.signUp(authCredentialsDto);
     }
@@ -32,7 +31,7 @@ export class AuthController {
     @ApiBody({
         type: AuthCredentialsDto
     })
-    @ApiBearerAuth()
+   // @ApiBearerAuth()
     signIn(@Body(ValidationPipe) authCredentialsDto: AuthCredentialsDto): Promise<{ accessToken: string }> {
         return this.authService.signIn(authCredentialsDto);
     }

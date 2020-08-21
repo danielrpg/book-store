@@ -9,4 +9,10 @@ export class CreateBookDto {
     
     @ApiProperty({ type: String, description: 'Price of the Book'})
     price: number;
+
+    @ApiProperty({ type: String, description: 'Image of the Book'})
+    imageUrl: string;
+
+    @ApiProperty({ type: String, description: 'Image of the Book'})
+    authorId: number;
 }

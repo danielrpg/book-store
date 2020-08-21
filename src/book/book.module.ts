@@ -4,6 +4,7 @@ import { BookService } from './book.service';
 import { BookRepository } from './book.repository';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from 'src/auth/auth.module';
+import { AuthorRepository } from 'src/author/author.repository';
 
 @Module({
   imports: [

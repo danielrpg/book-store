@@ -16,6 +16,9 @@ export class Book extends BaseEntity {
     @Column({ type: 'decimal' })
     price: number;
 
+    @Column()
+    imageUrl: string;
+
     @ManyToOne(type => Author, author => author.books, { eager: false })
     author: Author;
 
