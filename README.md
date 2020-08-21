@@ -48,6 +48,10 @@ this will start dabate postgres in a docker container with pg admin inside
 5.- If you like there is a postman collection file you can execute this 
 `book-store.postman_collection.json`
 
+![Database ](https://github.com/danielrpg/book-store/blob/master/documentation/database_in_postgresql.png)
+
+![Swagger Documentation ](https://github.com/danielrpg/book-store/blob/master/documentation/swagger_documentation.png)
+
 ## PROJECT DESCRIPTION
 
 Book Store API
