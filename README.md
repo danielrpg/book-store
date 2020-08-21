@@ -36,11 +36,13 @@ this will start dabate postgres in a docker container with pg admin inside
 
 4.- Then you should go to the following link inside a postman
 
-`http://localhost:3000/author/`
+`http://localhost:4000/author/`
 
-`http://localhost:3000/book/`
+`http://localhost:4000/book/`
 
-`http://localhost:3000/cart/`
+`http://localhost:4000/cart/`
+
+`http://localhost:4000/api/v1/#/default` this is the swagger documentation path if you want to know all paths available  
 
 
 5.- If you like there is a postman collection file you can execute this 
