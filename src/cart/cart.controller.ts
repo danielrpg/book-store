@@ -4,7 +4,7 @@ import { CreateCartDto } from './dto/create-cart.dto';
 import { CartService } from './cart.service';
 import { Cart } from './cart.entity';
 import { ApiResponse, ApiBody, ApiBearerAuth } from '@nestjs/swagger';
-import { CreateAuthorDto } from 'src/author/dto/create-author.dto';
+import { CreateAuthorDto } from '../author/dto/create-author.dto';
 
 @Controller('cart')
 @UseGuards(AuthGuard())

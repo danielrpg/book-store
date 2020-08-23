@@ -3,13 +3,15 @@ import { BookController } from './book.controller';
 import { BookService } from './book.service';
 import { BookRepository } from './book.repository';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AuthModule } from 'src/auth/auth.module';
-import { AuthorRepository } from 'src/author/author.repository';
+import { AuthModule } from '../auth/auth.module';
+import { AuthorModule } from '../author/author.module';
+import { AuthorRepository } from '../author/author.repository';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([BookRepository]),
+    TypeOrmModule.forFeature([BookRepository, AuthorRepository]),
     AuthModule,
+    AuthorModule,
   ],
   controllers: [BookController],
   providers: [BookService]

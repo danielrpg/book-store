@@ -1,6 +1,6 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "typeorm";
-import { Author } from "src/author/author.entity";
-import { BookCart } from "src/book-cart/book-cart.entity";
+import { Author } from "../author/author.entity";
+import { BookCart } from "../book-cart/book-cart.entity";
 
 @Entity()
 export class Book extends BaseEntity {

@@ -1,6 +1,7 @@
 import { EntityRepository, Repository } from "typeorm";
 import { Book } from './book.entity';
 import { CreateBookDto } from "./dto/create-book.dto";
+import { Author } from "../author/author.entity";
 
 @EntityRepository(Book)
 export class BookRepository extends Repository<Book> {
@@ -15,17 +16,15 @@ export class BookRepository extends Repository<Book> {
         return await this.findOne(id);
     }
 
-    async saveBook(createBookDto: CreateBookDto): Promise<Book> {
-        const { title, description, price, imageUrl, authorId } = createBookDto;
-
-       // const authorBook = this.authorRepository.findOne(authorId)
+    async saveBook(createBookDto: CreateBookDto, author: Author): Promise<Book> {
+        const { title, description, price, imageUrl} = createBookDto;
 
         const book = new Book();
         book.title = title;
         book.description = description;
         book.price = price;
         book.imageUrl = imageUrl;
-       // book.author = authorBook;
+        book.author = author;
 
         await this.save(book);
 

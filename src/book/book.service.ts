@@ -3,12 +3,15 @@ import { BookRepository } from './book.repository';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateBookDto } from './dto/create-book.dto';
 import { Book } from './book.entity';
+import { AuthorRepository } from '../author/author.repository';
 
 @Injectable()
 export class BookService {
     constructor(
         @InjectRepository(BookRepository)
-        private bookRepository: BookRepository
+        private bookRepository: BookRepository,
+        @InjectRepository(AuthorRepository)
+        private authorRepository: AuthorRepository
     ) {}
 
     getAll(page: number = 1): Promise<Book[]> {
@@ -27,8 +30,9 @@ export class BookService {
         return this.bookRepository.getById(id);
     }
 
-    saveBook(createBookDto: CreateBookDto): Promise<Book> {
-        return this.bookRepository.saveBook(createBookDto);
+    async saveBook(createBookDto: CreateBookDto): Promise<Book> {
+        const authorDb = await this.authorRepository.findOne(createBookDto.authorId);
+        return await this.bookRepository.saveBook(createBookDto, authorDb);
     }
 
     async deleteBook(id: number): Promise<void> {
